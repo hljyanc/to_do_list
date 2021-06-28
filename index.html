@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">   
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <div class="action-container">
+        <div class="add-task">
+            <input type="text" id="add-new-task" placeholder="Add a task" >
+            <div onclick="addTask()" class="icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                    <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </div>
+        </div>
+
+        <div class="btn-container hidden" id="undo-btn">
+            <div class="undo">
+                <p>Task Completed</p>
+                <p onclick="showTask()" class="undo-action">Undo</p>
+            </div>       
+        </div>
+    </div>
+    <div class="list-body-container">
+        <ul class="list-body">
+            <li class="task" >
+                <div class="checkmark" onclick ="completeTask(this)">
+                    <div class="circle"></div>
+                    <div class="tick"></div>
+                </div>
+                <div class="task-content">Buy a book</div>
+            </li>
+
+
+        </ul>
+    </div>
+    
+    
+</body>
+</html>
